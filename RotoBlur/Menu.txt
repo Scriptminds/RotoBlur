@@ -1,0 +1,24 @@
+#################################################################
+#                  *S C R I P T    M I N D S*                   #
+#################################################################
+
+
+
+
+
+
+#################################################################
+#RotoBlur
+
+
+import nuke
+from RotoBlur import create_roto_and_blur # Import the function from RotoBlur.py
+
+# Define the icon path
+Logo = "C:/Program Files/Nuke14.0v1/plugins/icons/Scriptminds_ICON.png"
+
+# Create the main ScriptMinds menu with an icon
+scriptminds_menu = nuke.menu('Nuke').addMenu('ScriptMinds', icon=Logo)
+
+# Add the "Find Directory" command under the ScriptMinds menu
+scriptminds_menu.addCommand('ScriptMinds/RotoBlur', create_roto_and_blur, 'O')
